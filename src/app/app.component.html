@@ -1,0 +1,32 @@
+<div class="two-across">
+
+  <section class="card">
+    <div class="card-content">
+      <span class="card-title">Prikklok</span>
+      <p>Hallo {{ name }}</p>
+      <p><b>{{message}}</b></p>
+      <p>Docenten moeten de shift ingedrukt houden terwijl ze inklokken.</p>
+    </div>
+    <div class="card-action">
+      <button class="btn">Klok in</button> &nbsp;
+      <button class="btn">Klok uit</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-content">
+      <span class="card-title">Komende week</span>
+      <div class="time-block">
+        <div class="day-0" style="height: 80px">M</div>
+        <div class="day-1" style="height: 75px">D</div>
+        <div class="day-2" style="height: 60px">W</div>
+        <div class="day-3" style="height: 65px">D</div>
+        <div class="day-4" style="height: 80px">V</div>
+      </div>
+      <div>
+        {{currentSchedule}}
+      </div>
+    </div>
+  </section>
+
+</div>
