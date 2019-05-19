@@ -8,8 +8,8 @@
       <p>Docenten moeten de shift ingedrukt houden terwijl ze inklokken.</p>
     </div>
     <div class="card-action">
-      <button class="btn">Klok in</button> &nbsp;
-      <button class="btn">Klok uit</button>
+      <button class="btn" (click)="clockIn($event)">Klok in</button> &nbsp;
+      <button class="btn" (click)="clockOut($event)">Klok uit</button>
     </div>
   </section>
 
@@ -17,11 +17,11 @@
     <div class="card-content">
       <span class="card-title">Komende week</span>
       <div class="time-block">
-        <div class="day-0" style="height: 80px">M</div>
-        <div class="day-1" style="height: 75px">D</div>
-        <div class="day-2" style="height: 60px">W</div>
-        <div class="day-3" style="height: 65px">D</div>
-        <div class="day-4" style="height: 80px">V</div>
+        <div (mouseenter)="rooster(0)" (mouseleave)="roosterReset()" class="day-0" style="height: 80px">M</div>
+        <div (mouseenter)="rooster(1)" (mouseleave)="roosterReset()" class="day-1" style="height: 75px">D</div>
+        <div (mouseenter)="rooster(2)" (mouseleave)="roosterReset()" class="day-2" style="height: 60px">W</div>
+        <div (mouseenter)="rooster(3)" (mouseleave)="roosterReset()" class="day-3" style="height: 65px">D</div>
+        <div (mouseenter)="rooster(4)" (mouseleave)="roosterReset()" class="day-4" style="height: 80px">V</div>
       </div>
       <div>
         {{currentSchedule}}
